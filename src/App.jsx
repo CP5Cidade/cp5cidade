@@ -8,9 +8,16 @@ import Card from './components/Card'
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produtos" element={<Produtos />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   )
 }
 
