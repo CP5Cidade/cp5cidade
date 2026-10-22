@@ -46,7 +46,7 @@ const Home = () => {
 
       <header className="mb-12 text-center">
         <span className="inline-block rounded-full border border-[#f3d5dc] bg-[#fff0f3] px-4 py-2 text-xs font-bold tracking-[0.2em] text-[#bd6b82]">
-          🍓 GELATO ARTESANAL
+           GELATO ARTESANAL
         </span>
 
         <h2 className="mt-5 text-4xl font-extrabold tracking-tight text-[#604438] md:text-5xl">
@@ -61,7 +61,6 @@ const Home = () => {
 
         <div className="mx-auto mt-6 flex items-center justify-center gap-3">
           <span className="h-px w-12 bg-[#edc4ce]" />
-          <span className="text-xl">🍦</span>
           <span className="h-px w-12 bg-[#edc4ce]" />
         </div>
       </header>
@@ -81,7 +80,7 @@ const Home = () => {
 
       <footer className="mt-16 border-t border-[#f0e2d8] pt-8 text-center">
         <p className="text-sm font-medium text-[#967f71]">
-          Feito com carinho, servido com felicidade. ♡
+          Feito com carinho, servido com felicidade. 
         </p>
       </footer>
 

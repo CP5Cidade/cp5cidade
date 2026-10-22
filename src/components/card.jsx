@@ -12,7 +12,7 @@ const Card = ({ titulo, preco, imagem }) => {
         />
 
         <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-[#bd6b82] shadow-sm backdrop-blur-sm">
-          🍦 Especial da casa
+           Especial da casa
         </span>
       </div>
 
@@ -39,7 +39,7 @@ const Card = ({ titulo, preco, imagem }) => {
           type="button"
           className="w-full rounded-2xl bg-gradient-to-r from-[#e995ac] to-[#d66f91] px-5 py-3.5 font-bold text-white shadow-md shadow-[#d66f91]/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-[#d97896] hover:to-[#c85b7d] hover:shadow-lg hover:shadow-[#d66f91]/30 active:translate-y-0 active:scale-[0.98]"
         >
-          🍨 Comprar agora
+           Comprar agora
         </button>
       </article>
 
