@@ -8,7 +8,7 @@ const navbar = () => {
         <img src={Logo} alt="logo" className="w-48 h-auto" />
         <nav className="flex items-center justify-center gap-10">
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/Produtos">Sorvetes</NavLink>
+          <NavLink to="/Produtos">Cardápio completo</NavLink>
         </nav>
       </div>
     </header>
