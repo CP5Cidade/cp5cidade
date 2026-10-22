@@ -2,15 +2,14 @@ import React from 'react'
 
 const navbar = () => {
   return (
-    <div>
-      <header>
-        <div >
-          <img/>
-          <nav >
-          </nav>
-        </div>
-      </header>
-    </div>
+    <header>
+      <div>
+        <nav>
+          <NavLink to="/" end className={classe}>Home</NavLink>
+          <NavLink to="/Produtos" className={classe}>Sorvetes</NavLink>
+        </nav>
+      </div>
+    </header>
   )
 }
 
