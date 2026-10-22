@@ -1,92 +1,49 @@
-
-import Card from '../components/Card'
-import morangoImg from '../assets/morango.png'
-import baunilhaImg from '../assets/baunilha.png'
-import chocolateImg from '../assets/chocolate.png'
-import pistacheImg from '../assets/pistache.png'
-
-const Home = () => {
-  const toys = [
-    {
-      id: 1,
-      titulo: "Morango Cremoso",
-      preco: "R$ 12,00",
-      imagem: morangoImg,
-      descricao: "Doce, suave e cheio de sabor.",
-      etiqueta: "MAIS VENDIDO"
-    },
-    {
-      id: 2,
-      titulo: "Baunilha Especial",
-      preco: "R$ 10,00",
-      imagem: baunilhaImg,
-      descricao: "Clássico, leve e irresistível.",
-      etiqueta: "CLÁSSICO"
-    },
-    {
-      id: 3,
-      titulo: "Chocolate Belga",
-      preco: "R$ 15,00",
-      imagem: chocolateImg,
-      descricao: "Intenso e super cremoso.",
-      etiqueta: "FAVORITO"
-    },
-    {
-      id: 4,
-      titulo: "Delícia de Pistache",
-      preco: "R$ 18,00",
-      imagem: pistacheImg,
-      descricao: "Um toque sofisticado e especial.",
-      etiqueta: "ESPECIAL"
-    }
-  ]
-
+const Card = ({ titulo, preco, imagem }) => {
   return (
-    <main className="min-h-screen grow bg-[#fffaf5] px-[5%] py-12 md:py-16">
+    <div className="group overflow-hidden rounded-3xl border border-[#f3e3dc] bg-white shadow-[0_8px_25px_rgba(96,68,56,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-[#3ACFF2] hover:shadow-[0_18px_35px_rgba(96,68,56,0.15)]">
 
-      <header className="mb-12 text-center">
-        <span className="inline-block rounded-full border border-[#f3d5dc] bg-[#fff0f3] px-4 py-2 text-xs font-bold tracking-[0.2em] text-[#bd6b82]">
-          🍓 GELATO ARTESANAL
+      {/* Imagem do produto */}
+      <div className="relative overflow-hidden bg-white">
+        <img
+          src={imagem}
+          alt={titulo}
+          className="h-[250px] w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold text-[#3ACFF2] shadow-sm backdrop-blur-sm">
+          🍦 Especial da casa
         </span>
+      </div>
 
-        <h2 className="mt-5 text-4xl font-extrabold tracking-tight text-[#604438] md:text-5xl">
-          Um mundo de{" "}
-          <span className="text-[#df8299]">sabores</span>
+      {/* Informações do produto */}
+      <article className="p-5 text-center">
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#3ACFF2]">
+          Feito com carinho
+        </p>
+
+        <h2 className="mb-3 text-xl font-extrabold uppercase tracking-wide text-[#3ACFF2] transition-colors duration-300 group-hover:text-[#3ACFF2]">
+          {titulo}
         </h2>
 
-        <p className="mx-auto mt-4 max-w-lg text-base leading-7 text-[#967f71] md:text-lg">
-          Pequenos momentos, grandes sabores.
-          Encontre seu novo sorvete favorito!
-        </p>
-
-        <div className="mx-auto mt-6 flex items-center justify-center gap-3">
-          <span className="h-px w-12 bg-[#edc4ce]" />
-          <span className="text-xl">🍦</span>
-          <span className="h-px w-12 bg-[#edc4ce]" />
+        <div className="mb-5">
+          <p className="mb-1 text-xs text-[#3ACFF2]">
+            Experimente por apenas
+          </p>
+          <p className="text-3xl font-extrabold tracking-tight text-[#3ACFF2]">
+            {preco}
+          </p>
         </div>
-      </header>
 
-      <section className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {toys.map((sorvete) => (
-          <Card
-            key={sorvete.id}
-            titulo={sorvete.titulo}
-            preco={sorvete.preco}
-            imagem={sorvete.imagem}
-            descricao={sorvete.descricao}
-            etiqueta={sorvete.etiqueta}
-          />
-        ))}
-      </section>
+        <button
+          type="button"
+          className="w-full rounded-2xl bg-gradient-to-r from-[#3ACFF2] to-[#3ACFF2] px-5 py-3.5 font-bold text-white shadow-md shadow-[#d66f91]/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-[#3ACFF2] hover:to-[#3ACFF2] hover:shadow-lg hover:shadow-[#d66f91]/30 active:translate-y-0 active:scale-[0.98]"
+        >
+          🍨 Comprar agora
+        </button>
+      </article>
 
-      <footer className="mt-16 border-t border-[#f0e2d8] pt-8 text-center">
-        <p className="text-sm font-medium text-[#967f71]">
-          Feito com carinho, servido com felicidade. ♡
-        </p>
-      </footer>
-
-    </main>
+    </div>
   )
 }
 
-export default Home
+export default Card
